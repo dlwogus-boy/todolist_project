@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
@@ -8,7 +9,8 @@ Make sure to install the dependencies:
 
 ```bash
 # npm
-npm install
+npm installgit add .
+
 
 # pnpm
 pnpm install
@@ -73,3 +75,7 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+=======
+# todolist_project
+toodolist for eveyone
+>>>>>>> 5166c78c6cc6cb913b955dec201e33912578bab7
