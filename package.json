@@ -14,7 +14,7 @@
     "bcrypt": "^5.1.1",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.16",
-    "nuxt": "^3.12.4",
+    "nuxt": "^3.14.1592",
     "sqlite3": "^5.1.7",
     "vue": "latest"
   }
