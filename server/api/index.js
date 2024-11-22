@@ -3,7 +3,7 @@ import sqlite3 from 'sqlite3';
 import bcrypt from 'bcrypt';
 import fetch from 'node-fetch';
 
-const dbPath = './mydatabase.db';
+const dbPath = path.resolve('./mydatabase.db');
 const db = new sqlite3.Database(dbPath);
 
 export default defineEventHandler(async (event) => {

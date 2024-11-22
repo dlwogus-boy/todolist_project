@@ -65,12 +65,17 @@ const toggleRegisterForm = () => {
 // 구글 OAuth 리디렉션
 const redirectToGoogleOAuth = () => {
   const clientId = '77251841608-nddq8a02fp8o9fu2ugk1kebuh3klcvvt.apps.googleusercontent.com';
-  const redirectUri = 'http://localhost:3000/callback';
+  const redirectUri =
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3000/callback'
+      : 'https://todolist-project-vert.vercel.app/callback';
+
   const scope = 'profile email';
   const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}&prompt=select_account`;
-  
+
   window.location.href = authUrl;
 };
+
 
 // 회원가입 처리 함수
 const register = async () => {
@@ -85,7 +90,7 @@ const register = async () => {
   }
 
   try {
-    const response = await fetch('/api/+server', {
+    const response = await fetch('/api', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -116,7 +121,7 @@ const checkButton = async (id, pw) => {
   }
 
   try {
-    const response = await fetch('/api/+server', {
+    const response = await fetch('/api', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ action: 'login', id, pw }),

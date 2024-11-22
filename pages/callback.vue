@@ -20,7 +20,7 @@ onMounted(async () => {
 
   try {
     // 서버로 OAuth 인증 코드 전송
-    const response = await fetch('/api/+server', {
+    const response = await fetch('/api', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ action: 'oauth', code }),

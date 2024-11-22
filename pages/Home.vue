@@ -119,7 +119,7 @@ const loadCategoriesFromDatabase = async () => {
   const user_id = localStorage.getItem('user_id');
 
   try {
-    const response = await fetch(`/api/+server`, {
+    const response = await fetch(`/api`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -219,7 +219,7 @@ const checkcheckbutton = async () => {
   }
 
   try {
-    const response = await fetch('/api/+server', {
+    const response = await fetch('/api', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -248,7 +248,7 @@ const deletebutton = async (index) => {
   const categoryId = categories.value[index].id;
 
   try {
-    const response = await fetch('/api/+server', {
+    const response = await fetch('/api', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -287,7 +287,7 @@ const allowbutton = async (index) => {
 
   try {
     // 서버로 태스크 추가 요청
-    const response = await fetch('/api/+server', {
+    const response = await fetch('/api', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -331,7 +331,7 @@ const allowbutton = async (index) => {
 //Task 삭제 함수
 const delTask = async (categoryIndex, taskId) => {
   try {
-    const response = await fetch('/api/+server', {
+    const response = await fetch('/api', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -380,7 +380,7 @@ const endTask = async (taskId) => {
   // 일정 시간 후 태스크 삭제
   setTimeout(async () => {
     try {
-      const response = await fetch('/api/+server', {
+      const response = await fetch('/api', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ taskId }),
