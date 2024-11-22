@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.2",
     "axios": "^1.7.5",
     "bcrypt": "^5.1.1",
     "node-fetch": "^3.3.2",
