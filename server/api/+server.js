@@ -181,7 +181,7 @@ export default defineEventHandler(async (event) => {
             return { status: 'error', message: '숫자로 써주세요.' };
           }
           if(month > 12 || day >31){
-            return { status: 'error', message: '옳바른 날짜를 입력해 주세요.' };
+            return { status: 'error', message: '올바른 날짜를 입력해 주세요.' };
           }
       
           const newTaskId = new Date().getTime();
