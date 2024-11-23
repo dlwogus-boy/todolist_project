@@ -3,7 +3,7 @@ import sqlite3 from 'sqlite3';
 import bcrypt from 'bcrypt';
 import fetch from 'node-fetch';
 
-const dbPath = path.resolve('./mydatabase.db');
+const dbPath = './mydatabase.db';
 const db = new sqlite3.Database(dbPath);
 
 export default defineEventHandler(async (event) => {
@@ -12,7 +12,6 @@ export default defineEventHandler(async (event) => {
   event.node.res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   event.node.res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  
   // OPTIONS 요청 처리
   if (method === 'OPTIONS') {
     event.node.res.statusCode = 200;
